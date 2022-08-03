@@ -1,0 +1,29 @@
+{
+  "name": "@qavajs/xunit-formatter",
+  "version": "0.0.1",
+  "description": "xunit compatible formatter for cucumber framework",
+  "scripts": {},
+  "main": "src/formatter.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qavajs/xunit-formatter.git"
+  },
+  "keywords": [
+    "cucumber",
+    "formatter"
+  ],
+  "authors": [
+    "Alexander Galichenko"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qavajs/xunit-formatter/issues"
+  },
+  "homepage": "https://github.com/qavajs/xunit-formatter#readme",
+  "dependencies": {
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.5.1"
+  }
+}
