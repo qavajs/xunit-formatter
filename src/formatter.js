@@ -17,10 +17,10 @@ class XunitFormatter extends JsonFormatter {
                     }
                 })
             }
-            log(new xml2js.Builder().buildObject(xml));
+            log(new xml2js.Builder({
+                xmldec: { noValidation: true }
+            }).buildObject(xml));
         }
-
-
     }
 
     getTestCases(testSuiteData) {
