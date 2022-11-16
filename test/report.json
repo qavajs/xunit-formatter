@@ -1,0 +1,140 @@
+[
+  {
+    "description": "Feature Description",
+    "elements": [
+      {
+        "description": "Scenario Description 1",
+        "id": "scenario_1",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Scenario 1",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 5,
+            "name": "action",
+            "match": {
+              "location": "step_definition/X.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "action",
+            "match": {
+              "location": "node_modules/@qavajs/steps-playwright/lib/actions.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "validation",
+            "match": {
+              "location": "node_modules/@qavajs/steps-playwright/lib/validations.js:38"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 4000000000,
+              "error_message": "ERROR"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag_scenario1",
+            "line": 1
+          },
+          {
+            "name": "@tag_scenario2",
+            "line": 7
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "Scenario Description 2",
+        "id": "scenario2",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Scenario 2",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "* ",
+            "line": 5,
+            "name": "action",
+            "match": {
+              "location": "step_definition/X.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "action",
+            "match": {
+              "location": "node_modules/@qavajs/steps-playwright/lib/actions.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag_scenario1",
+            "line": 1
+          },
+          {
+            "name": "@tag_scenario2",
+            "line": 7
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "feature",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Feature 1",
+    "tags": [
+      {
+        "name": "@tag_feature1",
+        "line": 1
+      }
+    ],
+    "uri": "features/feature1.feature"
+  }
+]
