@@ -13,7 +13,6 @@ test('should return valid xml', async () => {
     const formatter = new Formatter(magicOptions);
     const xmlString = formatter.buildXML(JSON.stringify(json));
     const xml = await xml2js.parseStringPromise(xmlString);
-    console.log(xml.testsuites.testsuite[0].$)
     expect(xml.testsuites.testsuite[0].$).toMatchObject({
         id: 'Feature 1',
         name: 'Feature 1',
