@@ -11,21 +11,22 @@ const magicOptions = new Proxy(function () {}, {
 });
 test('should return valid xml', async () => {
     const formatter = new Formatter(magicOptions);
-    const xml = await xml2js.parseStringPromise(formatter.buildXML(JSON.stringify(json)));
-    expect(xml.testsuites.testsuite[0].$).toStrictEqual({
-        id: "Feature 1",
-        name: "Feature 1",
-        package: "Feature 1"
+    const xmlString = formatter.buildXML(JSON.stringify(json));
+    const xml = await xml2js.parseStringPromise(xmlString);
+    expect(xml.testsuites.testsuite[0].$).toMatchObject({
+        id: 'Feature 1',
+        name: 'Feature 1',
+        package: 'Feature 1'
     });
-    expect(xml.testsuites.testsuite[0].testcase[0].$).toStrictEqual({
-        classname: "Feature 1",
-        name: "Scenario 1",
-        time: "10"
+    expect(xml.testsuites.testsuite[0].testcase[0].$).toMatchObject({
+        classname: 'Feature 1',
+        name: 'Scenario 1',
+        time: '10'
     });
-    expect(xml.testsuites.testsuite[0].testcase[0].failure).toStrictEqual(['ERROR']);
-    expect(xml.testsuites.testsuite[0].testcase[1].$).toStrictEqual({
-        classname: "Feature 1",
-        name: "Scenario 2",
-        time: "6"
+    expect(xml.testsuites.testsuite[0].testcase[0].failure).toMatchObject(['ERROR']);
+    expect(xml.testsuites.testsuite[0].testcase[1].$).toMatchObject({
+        classname: 'Feature 1',
+        name: 'Scenario 2',
+        time: '6'
     });
 });
